@@ -5,7 +5,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #822f76;
+  background-color:hsl(318, 75%, 39%);;
   z-index: 1000;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -118,6 +118,48 @@ main {
   margin-top: 100px; /* Altura del header */
 }
 
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .logo-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo-img {
+    height: 150px;
+    top: 0;
+    transform: none;
+    position: static;
+  }
+
+  .logo-text {
+    margin-left: 0;
+    font-size: 30px;
+    top: 0;
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .beneficios-contenedor {
+    grid-template-columns: 1fr;
+  }
+
+  .contenedor-testimonios .testimonio {
+    width: 100%;
+  }
+
+  .faq-container .faq-item {
+    width: 100%;
+  }
+}
 
 /* Bienvenida */
 .bienvenida {
@@ -145,6 +187,21 @@ main {
   text-align: center;
 }
 .esquema-img{
+  width: 90%; /* Establece el ancho al 60% del contenedor */
+  height: auto; /* Mantén las proporciones de la imagen */
+  display: block; /* Asegura que se comporte como un bloque para centrado */
+  margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+.contenido{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: url('background.jpg') no-repeat center center/cover;
+  color: black;
+  text-align: center;
+}
+.contenid-img{
   width: 40%; /* Establece el ancho al 60% del contenedor */
   height: auto; /* Mantén las proporciones de la imagen */
   display: block; /* Asegura que se comporte como un bloque para centrado */
@@ -158,10 +215,199 @@ main {
   border-radius: 5px;
   font-weight: bold;
 }
+#beneficios {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f7f0eb; /* Ajusta al color de fondo de la sección si es necesario */
+}
+
+.beneficios-contenedor {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Crea 4 columnas iguales */
+  gap: 20px; /* Espacio entre las tarjetas */
+  justify-items: center; /* Centra las tarjetas horizontalmente */
+}
+
+.tarjeta-beneficio {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s, box-shadow 0.3s; /* Transición suave */
+}
+
+.tarjeta-beneficio:hover {
+  transform: translateY(-10px); /* Mueve la tarjeta hacia arriba */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Añade una sombra más intensa */
+}
+
+.tarjeta-beneficio img {
+  width: 100%; /* Asegura que la imagen ocupe todo el ancho disponible */
+  max-width: 200px; /* Incrementa este valor para que las imágenes sean más grandes */
+  height: auto; /* Mantiene la proporción de la imagen */
+  margin-bottom: 15px;
+  transition: transform 0.3s; /* Efecto suave para el hover */
+}
+
+.tarjeta-beneficio:hover img {
+  transform: scale(1.1); /* Aumenta ligeramente el tamaño de la imagen */
+}
+
+.tarjeta-beneficio h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.tarjeta-beneficio p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.talleres{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: url('background.jpg') no-repeat center center/cover;
+  color: black;
+  text-align: center;
+}
+.talleres-img{
+  width: 60%; /* Establece el ancho al 60% del contenedor */
+  height: auto; /* Mantén las proporciones de la imagen */
+  display: block; /* Asegura que se comporte como un bloque para centrado */
+  margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+
+.testimonios {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f9f9f9; /* Fondo claro */
+}
+
+.titulo-testimonios {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.subtitulo-testimonios {
+  font-size: 16px;
+  color: #777;
+  margin-bottom: 30px;
+}
+
+.contenedor-testimonios {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.testimonio {
+  background-color: #fff; /* Fondo blanco */
+  border: 1px solid #ddd; /* Borde tenue */
+  border-radius: 8px;
+  padding: 20px;
+  width: calc(50% - 20px); /* Dos columnas */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: transform 0.3s;
+}
+
+.testimonio:hover {
+  transform: translateY(-5px); /* Efecto al pasar el cursor */
+}
+
+.texto-testimonio {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.autor-testimonio {
+  font-size: 14px;
+  color: #555;
+  font-weight: bold;
+}
+
+.faq {
+  text-align: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.faq-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.faq-highlight {
+  color: orange;
+}
+
+.faq-subtitle {
+  font-size: 16px;
+  color: #555;
+}
+
+.faq-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.faq-item {
+  width: calc(50% - 15px);
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.faq-item:hover {
+  transform: scale(1.03);
+}
+
+.faq-question {
+  padding: 15px 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+
+.faq-icon {
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+.faq-answer {
+  padding: 15px 20px;
+  background-color: #fff;
+  border-top: 1px solid #e0e0e0;
+  display: none;
+  text-align: left;
+}
+
+.faq-item.open .faq-answer {
+  display: block;
+}
+
+.faq-item.open .faq-icon {
+  transform: rotate(45deg);
+}
 
 /* Footer */
 .footer {
-  background-color: #333;
+  background-color: hsl(318, 75%, 39%);
   color: white;
   padding: 1rem;
   text-align: center;

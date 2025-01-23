@@ -43,3 +43,8 @@ document.addEventListener("DOMContentLoaded", function () {
         mobileMenu.classList.remove("active");
     });
 });
+ // funcion de preguntas frecuentes abre el signo de mas para ver la informacion
+function toggleFaq(element) {
+  const faqItem = element.parentNode;
+  faqItem.classList.toggle("open");
+}
