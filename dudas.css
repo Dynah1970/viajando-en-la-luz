@@ -172,7 +172,7 @@ main {
 
 
 /* Bienvenida */
-.bienvenida {
+.transgeneracional {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -181,7 +181,7 @@ main {
   color: black;
   text-align: center;
 }
-.imagen-bienvenida {
+.imagen-transgeneracional {
   width: 40%; /* Establece el ancho al 60% del contenedor */
   height: auto; /* Mantén las proporciones de la imagen */
   display: block; /* Asegura que se comporte como un bloque para centrado */
@@ -480,7 +480,6 @@ main {
   justify-content: center; /* Centra el contenido horizontalmente */
   align-items: center; /* Centra el contenido verticalmente, si es necesario */
 }
-
 /* Estilo del botón flotante de WhatsApp */
 .whatsapp-float {
   position: fixed;

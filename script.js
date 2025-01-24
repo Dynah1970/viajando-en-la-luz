@@ -27,7 +27,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
   
-
+ // Agregar acción al botón de WhatsApp
+ const whatsappButton = document.querySelector('.whatsapp');
+ whatsappButton.addEventListener('click', () => {
+     window.location.href = "https://wa.me/1234567890"; // Reemplazar con tu número
+ });
   document.addEventListener("DOMContentLoaded", function () {
     const menuIcon = document.getElementById("menu-icon");
     const mobileMenu = document.getElementById("mobile-menu");
