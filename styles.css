@@ -87,20 +87,47 @@ main {
 }
 
 
-/* Responsividad */
+/* Responsividad para pantallas de móviles y tabletas */
 @media (max-width: 768px) {
-    header .menu-icon {
-        display: block;
-    }
+  /* Ícono del menú */
+  header .menu-icon {
+    display: block;
+  }
 
-    header .desktop-nav {
-        display: none;
-    }
+  /* Navegación de escritorio */
+  header .desktop-nav {
+    display: none;
+  }
 
-    .menu {
-      display: none; /* Oculta el menú en pantallas pequeñas */
-    }
+  /* Ocultar el menú por defecto en pantallas pequeñas */
+  .menu {
+    display: none; /* Oculta el menú en pantallas pequeñas */
+  }
+
+  /* Ajustar el logo */
+  .logo-img {
+    height: 150px; /* Reduce el tamaño del logo */
+    width: auto; /* Mantiene la proporción */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px; /* Ajusta el margen izquierdo */
+  }
+
+  /* Ajustar el texto del logo */
+  .logo-text {
+    font-size: 24px; /* Reduce el tamaño del texto */
+    margin-left: 85px; /* Elimina el margen izquierdo */
+    top: -25px; /* Ajusta la posición del texto */
+  }
+
+  /* Alinear el logo y el texto en columna en dispositivos pequeños */
+  .logo-container {
+    flex-direction: column; /* Pone el logo y texto uno debajo del otro */
+    align-items: center; /* Centra los elementos */
+  }
 }
+
 
   main {
     margin-top: 100px; /* Más espacio si el header ocupa más área */
