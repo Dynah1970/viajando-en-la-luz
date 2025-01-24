@@ -84,75 +84,35 @@
 
 /* Responsividad */
 @media (max-width: 768px) {
-  header .menu-icon {
-      display: block;
-  }
+    header .menu-icon {
+        display: block;
+    }
 
-  header .desktop-nav {
-      display: none;
-  }
+    header .desktop-nav {
+        display: none;
+    }
 
-  .nav-container {
-      display: none;
-  }
+    .nav-container {
+        display: none;
+    }
 
-  .header-content {
-      align-items: center;
-      padding-left: 0;
-      text-align: center;
-  }
+    .header-content {
+        align-items: center;
+        padding-left: 0;
+        text-align: center;
+    }
 
-  .navegacion {
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-  }
+    .navegacion {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
 
-  .navegacion a {
-      width: 80%;
-      text-align: center;
-  }
+    .navegacion a {
+        width: 80%;
+        text-align: center;
+    }
 }
-
-
-
-  /* Ajustar el margen superior para la primera sección */
-  main {
-    margin-top: 160px; /* Ajustar el margen superior para no ocultar la primera sección */
-  }
-
-  @media (max-width: 768px) {
-    .header-fijo {
-      padding: 0.5rem 0.8rem; /* Reduce el padding general */
-    }
-  
-    .navbar {
-      flex-wrap: wrap; /* Permite que los elementos se ajusten si no caben */
-      justify-content: center; /* Centra los elementos en pantallas pequeñas */
-      padding: 0.5rem; /* Reduce el padding */
-    }
-  
-    .logo-container {
-      flex-direction: column; /* Coloca el logo y el texto en una columna */
-      align-items: center;
-      text-align: center; /* Centra los elementos */
-      gap: 0; /* Elimina el espacio entre el logo y el texto */
-      margin-bottom: 10px; /* Ajusta si hay otros elementos cercanos */
-    }
-  
-    .logo-container {
-      gap: 5px; /* Ajusta la separación entre el logo y el texto */
-    }
-  
-    .logo-text {
-      margin-left: 0; /* Elimina el margen extra */
-    }
-  
-    .menu {
-      flex-direction: column; /* Apila el menú en una columna */
-      gap: 10px; /* Añade espacio entre los elementos del menú */
-    }
-  }
   
   .beneficios-contenedor {
     grid-template-columns: 1fr;
