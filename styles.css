@@ -81,6 +81,28 @@
   color: white;
   display: block;
 }
+.menu-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px; /* Asegúrate de que tenga tamaño suficiente */
+  height: 50px;
+  cursor: pointer;
+  color: #FFFFFF;
+  position: relative; /* Evita que sea afectado por otros elementos */
+  z-index: 1001; /* Asegúrate de que esté sobre el resto del contenido */
+}
+
+.mobile-menu .close-icon {
+  font-size: 30px; /* Aumenta el tamaño de la "X" */
+  color: white; /* Asegúrate de que sea visible */
+  cursor: pointer;
+  padding: 20px;
+  background-color: rgba(129, 35, 111, 1); /* Contrasta más el fondo */
+   text-align: center;
+  margin: 10px; /* Separa la "X" de los bordes */
+}
+
 main {
   margin-top: 80px; /* Ajusta al tamaño del header */
   padding: 20px; /* Espaciado interno para el contenido */
@@ -92,6 +114,7 @@ main {
   /* Ícono del menú */
   header .menu-icon {
     display: block;
+   
   }
 
   /* Navegación de escritorio */
