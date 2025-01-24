@@ -77,9 +77,11 @@
 }
 
 .mobile-nav a {
+  list-style: none; /* Elimina los puntos de los enlaces */
   text-decoration: none;
   color: white;
   display: block;
+  
 }
 .menu-icon {
   display: flex;
@@ -237,7 +239,7 @@ main {
   }
 }
 .btn-cta {
-  background-color: #ff5722;
+  background-color: hsl(319, 100%, 57%);
   color: white;
   padding: 0.8rem 1.5rem;
   text-decoration: none;
@@ -401,7 +403,7 @@ main {
 }
 
 .faq-highlight {
-  color: orange;
+  color: #ff00ae;
 }
 
 .faq-subtitle {

@@ -12,34 +12,17 @@
     <!-- Ícono del menú hamburguesa (solo visible en móviles y tabletas) -->
     <div id="menu-icon" class="menu-icon" style="font-size: 2.5rem; cursor: pointer; color: #FFFFFF;">&#9776;</div>
   
-    <style>
-        /* Tamaño base */
-        .menu-icon {
-            font-size: 2.5rem; /* Tamaño por defecto */
-        }
-  
-        /* Responsivo: Cambia el tamaño del ícono para dispositivos móviles */
-        @media (max-width: 768px) {
-            .menu-icon {
-                font-size: 3rem; /* Tamaño más grande en móviles */
-            }
-        }
-  
-        @media (min-width: 1024px) {
-            .menu-icon {
-                font-size: 2rem; /* Tamaño más pequeño en desktop */
-            }
-        }
-    </style>
+    
   
     <nav class="navbar">
       <div class="logo">
-        <img src="logo.png" alt="Logo Talleres de Constelaciones" class="logo-img">
+        <img src="logo2.png" alt="Logo Talleres de Constelaciones" class="logo-img">
+        <span class="logo-text">Viajando en la luz</span>
       </div>
      
       <ul class="menu" id="menu">
         <li><a href="index.html">Inicio</a></li>
-        <li><a href="sobre.html">Sobre Nosotros</a></li>
+        <li><a href="sobre.html">Preguntas frecuentes</a></li>
         <li><a href="talleres.html">Talleres</a></li>
         <li><a href="comprar.html">Comprar Talleres</a></li>
         <li><a href="contacto.html">Contacto</a></li>
@@ -49,11 +32,12 @@
       <div id="close-icon" class="close-icon">&times;</div>
       <nav class="mobile-nav">
         <li><a href="index.html">Inicio</a></li>
-        <li><a href="sobre.html">Sobre Nosotros</a></li>
+        <li><a href="sobre.html">Preguntas frecuentes</a></li>
         <li><a href="talleres.html">Talleres</a></li>
         <li><a href="comprar.html">Comprar Talleres</a></li>
         <li><a href="contacto.html">Contacto</a></li>
    
+  
   </header>
 
   <section class="section">
@@ -64,29 +48,109 @@
   <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank">
     <img src="whatsapp-icon.png" alt="WhatsApp">
   </a>
-</body>
-<main>
-  <section class="faq">
-    <h2 class="faq-title">Preguntas <span class="faq-highlight">frecuentes</span></h2>
-    <p class="faq-subtitle">Despeja todas tus dudas</p>
+  </body>
+  <main>
+    <section class="faq">
+      <h2 class="faq-title">Preguntas <span class="faq-highlight">frecuentes</span></h2>
+      <p class="faq-subtitle">Despeja todas tus dudas</p>
   
-    <div class="faq-container">
-      <div class="faq-item">
-        <div class="faq-question" onclick="toggleFaq(this)">
-          ¿Por qué piden tanta documentación para ser broker?
-          <span class="faq-icon">+</span>
+      <div class="faq-container">
+        <!-- Constelaciones Familiares -->
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            ¿Qué son las constelaciones familiares?
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            Las constelaciones familiares son una terapia sistémica que busca identificar y sanar patrones o traumas heredados de generaciones anteriores, promoviendo el bienestar del individuo dentro de su familia.
+          </div>
         </div>
-        <div class="faq-answer">
-          Para garantizar que cumplas con los requisitos legales y que podamos proporcionarte un servicio personalizado acorde a tus necesidades.
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            ¿Cómo funcionan las constelaciones familiares?
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            Las constelaciones funcionan al representar simbólicamente a los miembros de la familia, lo que permite identificar dinámicas ocultas y generar soluciones a nivel emocional y energético.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            ¿Puedo realizar constelaciones familiares sin conocer la historia de mi familia?
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            Aunque puede ser útil conocer algunos aspectos de tu árbol genealógico, las constelaciones familiares pueden trabajar con la información energética que surge durante la sesión.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            ¿Las constelaciones familiares pueden resolver conflictos de relaciones?
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            Sí, las constelaciones ayudan a resolver conflictos en las relaciones familiares al revelar patrones subyacentes que afectan la dinámica entre los miembros de la familia.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            ¿Cuántas sesiones de constelaciones familiares necesito?
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            El número de sesiones depende de cada persona y situación, pero algunas personas experimentan cambios significativos después de una sola sesión.
+          </div>
+        </div>
+  
+        <!-- Terapia Transgeneracional -->
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            ¿Qué es la terapia transgeneracional?
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            La terapia transgeneracional trabaja con los patrones heredados de generaciones anteriores para liberar bloqueos emocionales y sanar traumas transmitidos de forma inconsciente.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            ¿Cómo funciona la terapia transgeneracional?
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            La terapia transgeneracional implica explorar la historia familiar y los patrones emocionales que se repiten a lo largo de las generaciones, con el fin de liberarlos y sanar las heridas no resueltas.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            ¿Puedo hacer terapia transgeneracional si no tengo contacto con mi familia?
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            Sí, la terapia se basa en las energías y patrones familiares, por lo que no es necesario tener contacto directo con los miembros de la familia para trabajar en los problemas heredados.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            ¿Cuántas sesiones de terapia transgeneracional son necesarias?
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            El número de sesiones varía según la persona y los problemas a tratar, pero muchas personas encuentran alivio y cambios significativos después de unas pocas sesiones.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            ¿La terapia transgeneracional puede ayudar a sanar enfermedades heredadas?
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            Sí, muchos problemas de salud tienen raíces emocionales o traumas transgeneracionales, y la terapia puede ayudar a liberar estos bloqueos, promoviendo la sanación física y emocional.
+          </div>
         </div>
       </div>
-      <div class="faq-item">
-        <div class="faq-question" onclick="toggleFaq(this)">
-          ¿Por qué Adamantine es el nuevo administrador de mi crédito hipotecario?
-          <span class="faq-icon">+</span>
-        </div>
-        <div class="faq-answer">
-          Adamantine fue seleccionado por la institución financiera como el nuevo administrador debido a su experiencia en el manejo de créditos hipotec
+    </section>
+  </main>
   
 </main>
 <footer class="footer">
@@ -96,7 +160,7 @@
   <div class="footer-enlaces">
     <ul class="menu" id="menu">
       <li><a href="index.html">Inicio</a></li>
-      <li><a href="sobre.html">Sobre Nosotros</a></li>
+      <li><a href="sobre mi">preguntas frecuentes</a></li>
       <li><a href="talleres.html">Talleres</a></li>
       <li><a href="comprar.html">Comprar Talleres</a></li>
       <li><a href="contacto.html">Contacto</a></li>
