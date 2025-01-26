@@ -76,13 +76,32 @@
   padding: 20px;
 }
 
-.mobile-nav a {
-  list-style: none; /* Elimina los puntos de los enlaces */
-  text-decoration: none;
-  color: white;
-  display: block;
-  
+
+
+/* Elimina los puntos de lista para todos los menús */
+ul, li {
+  list-style: none; /* Elimina los puntos */
+  margin: 0; /* Resetea márgenes */
+  padding: 0; /* Resetea padding */
 }
+
+/* Estilo para el menú móvil */
+.mobile-menu ul {
+  list-style: none; /* Elimina los puntos de viñeta del menú móvil */
+}
+
+.mobile-menu li {
+  margin: 0; /* Resetea cualquier margen predeterminado */
+  padding: 0.5rem 0; /* Ajusta el espacio entre los elementos del menú */
+}
+
+.mobile-menu a {
+  text-decoration: none; /* Elimina el subrayado */
+  color: white; /* Define un color para los enlaces */
+  display: block; /* Asegura que ocupen todo el ancho disponible */
+  padding: 0.5rem 1rem; /* Espaciado interno para los enlaces */
+}
+
 .menu-icon {
   display: flex;
   align-items: center;
@@ -104,6 +123,7 @@
    text-align: center;
   margin: 10px; /* Separa la "X" de los bordes */
 }
+
 
 main {
   margin-top: 80px; /* Ajusta al tamaño del header */
