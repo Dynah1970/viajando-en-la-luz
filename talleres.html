@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Talleres - Talleres de Constelaciones</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Sobre Nosotros - Talleres de Constelaciones</title>
+  <link rel="stylesheet" href="taller.css">
 </head>
 <body>
      
@@ -12,36 +12,21 @@
     <!-- Ícono del menú hamburguesa (solo visible en móviles y tabletas) -->
     <div id="menu-icon" class="menu-icon" style="font-size: 2.5rem; cursor: pointer; color: #FFFFFF;">&#9776;</div>
   
-    <style>
-        /* Tamaño base */
-        .menu-icon {
-            font-size: 2.5rem; /* Tamaño por defecto */
-        }
-  
-        /* Responsivo: Cambia el tamaño del ícono para dispositivos móviles */
-        @media (max-width: 768px) {
-            .menu-icon {
-                font-size: 3rem; /* Tamaño más grande en móviles */
-            }
-        }
-  
-        @media (min-width: 1024px) {
-            .menu-icon {
-                font-size: 2rem; /* Tamaño más pequeño en desktop */
-            }
-        }
-    </style>
+    
   
     <nav class="navbar">
       <div class="logo">
-        <img src="logo.png" alt="Logo Talleres de Constelaciones" class="logo-img">
+        <img src="logo2.png" alt="Logo Talleres de Constelaciones" class="logo-img">
+        <span class="logo-text">Viajando en la luz</span>
       </div>
      
       <ul class="menu" id="menu">
         <li><a href="index.html">Inicio</a></li>
-        <li><a href="sobre.html">Sobre Nosotros</a></li>
+        <li><a href="sobre.html">Preguntas frecuentes</a></li>
+        <li><a href="sobremi.html">sobre mi</a></li>
+        <li><a href="informacion.html">informacion</a></li>
         <li><a href="talleres.html">Talleres</a></li>
-        <li><a href="comprar.html">Comprar Talleres</a></li>
+        <li><a href="terapias.html">terapias</a></li>
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </nav>
@@ -49,34 +34,91 @@
       <div id="close-icon" class="close-icon">&times;</div>
       <nav class="mobile-nav">
         <li><a href="index.html">Inicio</a></li>
-        <li><a href="sobre.html">Sobre Nosotros</a></li>
+        <li><a href="sobre.html">Preguntas frecuentes</a></li>
+        <li><a href="sobremi.html">sobre mi</a></li>
+        <li><a href="informacion.html">informacion</a></li>
         <li><a href="talleres.html">Talleres</a></li>
-        <li><a href="comprar.html">Comprar Talleres</a></li>
+        <li><a href="terapias.html">terapias</a></li>
         <li><a href="contacto.html">Contacto</a></li>
    
+  
   </header>
-  <section class="section">
-    <h2>Talleres Disponibles</h2>
-    <div class="talleres-container">
-      <div class="taller">
-        <h3>Constelaciones Familiares - En Vivo</h3>
-        <p>Fecha: 10 de Febrero, 2025</p>
-        <p>Precio: $50 USD</p>
-        <button class="btn-comprar">Comprar</button>
+  <main>
+    <h2 class="titulo-terapia">PRÓXIMOS TALLERES</h2>
+    <p class="texto-justificado">¡Es tu momento, empieza a vivir una vida plena y satisfactoria!</p>
+  
+    <div class="container">
+      <!-- Carta 1 -->
+      <div class="carta">
+          <img src="adolecentesyniños.webp" alt="Terapia Niños">
+          <h3>Encuentros de bienestar emocional para mujeres</h3>
+          <p><strong>Facilita:</strong> Guadalupe Montoya Lazos</p>
+          <p><strong>Taller:</strong> Dedicado al autocuidado, conexión con la calma y el bienestar emocional</p>
+          <p><strong>Día:</strong> Viernes 15 y 28 de Noviembre 2024</p>
+          <p>Viernes 13 de Diciembre 2024</p>
+          <p><strong>Hora:</strong> 19:00</p>
+          <p><strong>Lugar:</strong> Taller On Line</p>
+          <p><strong>Acceso:</strong> Gratuito previa inscripción</p>
+          <p><a href="contacto.html">Haz click Aquí para reservar tu plaza.</a></p>
+          <div class="carta-content">
+              <p class="description">Brinda apoyo para afrontar situaciones difíciles y desarrollar herramientas emocionales.</p>
+              <button class="toggle-btn">Leer más</button>
+          </div>
       </div>
-      <div class="taller">
-        <h3>Taller Transgeneracional - Grabado</h3>
-        <p>Disponible para reproducción inmediata.</p>
-        <p>Precio: $30 USD</p>
-        <button class="btn-comprar">Comprar</button>
+  
+      <!-- Carta 2 -->
+      <div class="carta">
+          <img src="individual.webp" alt="Terapia Individual">
+          <h3>Terapia Individual Adultos</h3>
+          <p><strong>Facilita:</strong>Guadalupe Montoya Lazos</p>
+          <p><strong>Terapia:</strong> Enfocada en superar desafíos personales y alcanzar el bienestar emocional.</p>
+          <p><strong>Horario:</strong> Según disponibilidad</p>
+          <p><strong>Modalidad:</strong> Presencial u Online</p>
+          <p><a href="contacto.html">Haz click Aquí para más información.</a></p>
+          <div class="carta-content">
+              <p class="description">Brinda apoyo para afrontar situaciones difíciles y desarrollar herramientas emocionales.</p>
+              <button class="toggle-btn">Leer más</button>
+          </div>
       </div>
-    </div>
-  </section>
-
-  <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank">
-    <img src="whatsapp-icon.png" alt="WhatsApp">
-  </a>
-</body>
+  
+      <!-- Carta 3 -->
+      <div class="carta">
+          <img src="pareja.webp" alt="Terapia de Pareja">
+          <h3>Terapia de Pareja</h3>
+          <p><strong>Facilita:</strong> Guadalupe Montoya Lazos/p>
+          <p><strong>Terapia:</strong> Diseñada para fortalecer la relación y afrontar desafíos juntos.</p>
+          <p><strong>Horario:</strong> Según disponibilidad</p>
+          <p><strong>Modalidad:</strong> Presencial u Online</p>
+          <p><a href="contacto.html">Haz click Aquí para más información.</a></p>
+          <div class="carta-content">
+              <p class="description">Fortalece la relación y afronta desafíos juntos de manera saludable.</p>
+              <button class="toggle-btn">Leer más</button>
+          </div>
+      </div>
+  
+      <!-- Carta 4 -->
+      <div class="carta">
+          <img src="familia.webp" alt="Terapia Familiar">
+          <h3>Terapia Familiar</h3>
+          <p><strong>Facilita:</strong>Guadalupe Montoya Lazos</p>
+          <p><strong>Terapia:</strong> Ayuda a reparar relaciones familiares y mejorar la dinámica del hogar.</p>
+          <p><strong>Horario:</strong> Según disponibilidad</p>
+          <p><strong>Modalidad:</strong> Presencial u Online</p>
+          <p><a href="contacto.html">Haz click Aquí para más información.</a></p>
+          <div class="carta-content">
+              <p class="description">Repara las relaciones familiares y crea un ambiente armonioso.</p>
+              <button class="toggle-btn">Leer más</button>
+          </div>
+      </div>
+  </div>
+  
+  <script src="script.js" defer></script>
+  </main>
+ <!-- Botón de WhatsApp -->
+ <a href=https://wa.me/525520717651?text=Hola,%20me%20gustaría%20saber%20más%20sobre%20sus%20propiedades
+ class="whatsapp-float" target="_blank" title="Contacta por WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
 <footer class="footer">
   <div class="footer-info">
     <p>&copy; 2025 Talleres de Constelaciones. Todos los derechos reservados.</p>
@@ -84,13 +126,16 @@
   <div class="footer-enlaces">
     <ul class="menu" id="menu">
       <li><a href="index.html">Inicio</a></li>
-      <li><a href="sobre.html">Sobre Nosotros</a></li>
+      <li><a href="">preguntas frecuentes</a></li>
+      <li><a href="sobremi.html">sobre mi</a></li>
+        <li><a href="informacion.html">informacion</a></li>
       <li><a href="talleres.html">Talleres</a></li>
-      <li><a href="comprar.html">Comprar Talleres</a></li>
+      <li><a href="terapias.html">terapias</a></li>
       <li><a href="contacto.html">Contacto</a></li>
     </ul>
     
   </div>
+
 </footer>
 <script src="script.js" defer></script>
 </html>

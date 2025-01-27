@@ -17,16 +17,15 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   
   // Desplazamiento suave al hacer clic en enlaces del menú
-  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-    anchor.addEventListener("click", function (e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute("href"));
-      target.scrollIntoView({
-        behavior: "smooth",
-      });
+  document.querySelectorAll('.toggle-btn').forEach(button => {
+    button.addEventListener('click', () => {
+        const description = button.parentElement.querySelector('.description');
+        const isHidden = description.style.display === 'none' || description.style.display === '';
+        description.style.display = isHidden ? 'block' : 'none';
+        button.textContent = isHidden ? 'Leer menos' : 'Leer más';
     });
-  });
-  
+});
+
 
   document.addEventListener("DOMContentLoaded", function () {
     const menuIcon = document.getElementById("menu-icon");
@@ -55,3 +54,22 @@ function toggleFaq(element) {
      window.location.href = "https://wa.me/1234567890"; // Reemplazar con tu número
  });
 
+
+ // expandir la lectura en terapias htmldocument.querySelectorAll('.expand').forEach(button => {
+  document.querySelectorAll('.toggle-btn').forEach(button => {
+    button.addEventListener('click', () => {
+        const description = button.parentElement.querySelector('.description');
+        const isHidden = description.style.display === 'none' || description.style.display === '';
+        description.style.display = isHidden ? 'block' : 'none';
+        button.textContent = isHidden ? 'Leer menos' : 'Leer más';
+    });
+});
+
+
+//contacto html para talleres  => {
+   // Mostrar/ocultar opciones según el interés
+   document.getElementById('interes').addEventListener('change', function() {
+    const seleccion = this.value;
+    document.querySelector('.opciones-talleres').style.display = seleccion === 'taller' ? 'block' : 'none';
+    document.querySelector('.opciones-terapias').style.display = seleccion === 'terapia' ? 'block' : 'none';
+});

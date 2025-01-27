@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
 
 /* Header fijo */
 .header-fijo {
@@ -77,7 +79,6 @@
 }
 
 
-
 /* Elimina los puntos de lista para todos los menús */
 ul, li {
   list-style: none; /* Elimina los puntos */
@@ -102,6 +103,8 @@ ul, li {
   padding: 0.5rem 1rem; /* Espaciado interno para los enlaces */
 }
 
+  
+
 .menu-icon {
   display: flex;
   align-items: center;
@@ -123,7 +126,6 @@ ul, li {
    text-align: center;
   margin: 10px; /* Separa la "X" de los bordes */
 }
-
 
 main {
   margin-top: 80px; /* Ajusta al tamaño del header */
@@ -200,124 +202,123 @@ main {
     max-width: 100%;
   }
   
-  .video-transgeneracional {
+  .video-constelaciones{
     width: 100%;
     height: auto;
     max-width: none;  /* Esto es para limitar el tamaño máximo en pantallas grandes */
   }
   @media (max-width: 768px) {
-    .video-transgeneracional {
+    .video-tconstelaciones {
       max-width: 100%; /* Asegura que el video ocupe todo el ancho en pantallas pequeñas */
     }
   }
- 
-  
-  
-  .section {
-    padding: 20px;
-    text-align: center;
+   
+ /* terapia css para imagenes,texto y abrir botones leer mas y leer menos */
+
+ .titulo-terapia {
+  text-align: center; /* Centra el título */
+  font-size: 2rem; /* Tamaño adecuado para el encabezado */
+  color: #333; /* Color del texto */
+  font-weight: bold; /* Negrita para el encabezado */
+  margin: 2rem 0; /* Espacio superior e inferior */
+}
+
+.texto-justificado {
+  text-align: justify;  /* Justifica el texto */
+  font-size: 1rem;      /* Tamaño de la fuente */
+  color: #333;          /* Color de texto */
+  margin-top: 1rem;     /* Espacio arriba del texto */
+  margin-bottom: 1.5rem; /* Espacio abajo del texto */
+  line-height: 1.6;     /* Espaciado entre líneas */
+}
+
+ .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Dos columnas por fila */
+  max-width: 900px;
+  padding: 2rem;
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
+}
+
+.carta {
+  background:#d5d3cf;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave para transform y box-shadow */
+}
+
+.carta img {
+  width: 100%; /* La imagen se ajusta al ancho de la carta */
+  height: auto;
+  max-width: 300px;
+  margin: 0 auto 1rem;
+}
+
+.carta h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.carta p {
+  margin: 0.5rem 0;
+}
+
+.carta .description {
+  display: none; /* Oculto por defecto */
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0.5rem 0;
+}
+.carta:hover {
+  transform: translateY(-10px) scale(1.1); /* Efecto de levitación y crecimiento */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
+}
+.toggle-btn {
+  background: red;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.toggle-btn:hover {
+  background: darkred;
+}
+
+/* Diseño responsivo para móviles */
+@media (max-width: 768px) {
+  .container {
+      grid-template-columns: repeat(2, 1fr); /* Dos cartas por fila en pantallas medianas */
   }
-  
-  .icons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+}
+
+@media (max-width: 480px) {
+  .container {
+      grid-template-columns: 1fr; /* Una carta por fila en pantallas pequeñas */
   }
-  
-  .icon {
-    background: #f7f4ff;
-    padding: 15px;
-    border-radius: 8px;
-    max-width: 200px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave para transform y box-shadow */
-  }
-  .icon:hover {
-    transform: translateY(-10px) scale(1.1); /* Efecto de levitación y crecimiento */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
-  }
-  
-  .icon h3 {
-    color: #a35de1;
-  }
-  .icon img {
-    width: 50px; /* Ajusta el tamaño según sea necesario */
-    height: auto; /* Mantiene la proporción de la imagen */
-    display: block; /* Asegura un buen alineamiento */
-    margin: 0 auto 10px; /* Centra la imagen y agrega espacio inferior */
-  }
-  
-  .highlight {
-    background: #e8f0ff;
-    margin: 20px 0;
-    padding: 15px;
-  }
-  
-  .cta {
-    background: #f2e1ff;
-    padding: 20px;
-    border-radius: 10px;
-  }
-  
-  .cta img {
-    width: 50px;
-    margin-bottom: 10px;
-  }
-  
-  .form {
-    margin: 20px;
-  }
-  /* Ajuste para el título */
-section.form h3 {
-    text-align: center; /* Centra el título */
-    margin-bottom: 15px; /* Espacio debajo del título */
-  }
-  
-  /* Ajuste para el párrafo */
-  section.form p {
-    text-align: center; /* Centra el texto del párrafo */
-    margin-bottom: 20px; /* Espacio debajo del párrafo */
-    font-size: 16px; /* Tamaño de fuente ajustable */
-  }
-  form input, form textarea, form button {
-    display: block;
-    width: 100%;
-    margin: 10px 0;
-    padding: 10px;
-  }
-  
-  form button {
-    background: #a35de1;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  form button:hover {
-    background: #933bd8;
-  }
-  
-  .cta video {
-    width: 150px; /* Tamaño similar al de un ícono */
-    height: 150px; /* Mantiene la proporción cuadrada */
-    margin-top: 10px; /* Espacio entre el texto y el video */
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2); /* Sombra */
-    
-  }
-  
+}
+
 /* Bienvenida */
-.transgeneracional {
+.bienvenida {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.5rem; /* Tamaño más grande */
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 2rem;
   background: url('background.jpg') no-repeat center center/cover;
   color: black;
+  text-align: justify;
   text-align: center;
 }
-.imagen-transgeneracional {
+.imagen-bienvenida {
   width: 40%; /* Establece el ancho al 60% del contenedor */
   height: auto; /* Mantén las proporciones de la imagen */
   display: block; /* Asegura que se comporte como un bloque para centrado */
@@ -616,6 +617,7 @@ section.form h3 {
   justify-content: center; /* Centra el contenido horizontalmente */
   align-items: center; /* Centra el contenido verticalmente, si es necesario */
 }
+
 /* Estilo del botón flotante de WhatsApp */
 .whatsapp-float {
   position: fixed;
