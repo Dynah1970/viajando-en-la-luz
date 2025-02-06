@@ -283,6 +283,24 @@ main {
   }
 }
 
+/* Asegurando que los GIFs se comporten igual que los videos */
+.gif-constelaciones, /* Clase para el GIF */
+.video-constelaciones {
+  width: 100%; /* Ocupa todo el ancho disponible */
+  height: auto; /* Mantiene la proporción */
+  max-width: none; /* Sin límite de ancho */
+  object-fit: cover; /* Asegura que cubra completamente el contenedor */
+}
+
+/* Ajustes para pantallas más pequeñas (Móviles y tabletas) */
+@media (max-width: 1024px) {
+  .gif-constelaciones{
+    width: 100vw; /* Ocupar todo el ancho de la pantalla */
+    height: auto; /* Mantener la proporción de la imagen o video */
+    max-width: none; /* Sin límite de ancho */
+    padding: 0; /* Eliminar relleno */
+  }
+}
 /* Estilo para los enlaces */
 a {
   color: hsl(319, 100%, 57%);
