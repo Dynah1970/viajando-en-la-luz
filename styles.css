@@ -343,6 +343,32 @@ a:hover {
   padding: 10px;
 }
 
+/* Asegurando que los GIFs se comporten igual que los videos */
+.gif-constelaciones, /* Clase para el GIF */
+.video-constelaciones {
+  width: 100%; /* Ocupa todo el ancho disponible */
+  height: auto; /* Mantiene la proporción */
+  max-width: none; /* Sin límite de ancho */
+  object-fit: cover; /* Asegura que cubra completamente el contenedor */
+}
+
+/* Diseño responsivo para pantallas pequeñas */
+@media (max-width: 1024px) {
+  .gif-constelaciones, /* Asegura que se vea correctamente en tabletas */
+  .video-constelaciones {
+    width: 100vw; /* Ocupar todo el ancho de la pantalla */
+    height: auto; /* Mantener la proporción */
+    max-width: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .gif-constelaciones,
+  .video-constelaciones {
+    width: 100%; /* Ocupa todo el ancho en teléfonos */
+    height: auto; /* Mantener la proporción */
+  }
+}
 /* Ajustes para los títulos de bienvenida */
 .bienvenida h1,
 .familia-contenedor h1 {
