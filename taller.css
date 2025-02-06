@@ -225,20 +225,21 @@ main {
 
 .texto-justificado {
   text-align:center;  /* Justifica el texto */
-  font-size: 1rem;      /* Tamaño de la fuente */
+  font-size: 1.9rem;      /* Tamaño de la fuente */
   color: #333;          /* Color de texto */
   margin-top: 1rem;     /* Espacio arriba del texto */
   margin-bottom: 1.5rem; /* Espacio abajo del texto */
   line-height: 1.6;     /* Espaciado entre líneas */
 }
 
- .container {
+.container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Dos columnas por fila */
-  max-width: 900px;
-  padding: 2rem;
-  margin: 0 auto; /* Centra el contenedor horizontalmente */
+  grid-template-columns: repeat(2, 1fr); /* Mantiene dos tarjetas por fila */
+  gap: 40px; /* Espacio entre tarjetas (hacia abajo y a la derecha) */
+  justify-content: center;
+  padding: 20px; /* Espacio alrededor del contenedor */
 }
+
 
 .carta {
   background:#d5d3cf;
@@ -265,6 +266,7 @@ main {
 
 .carta p {
   margin: 0.5rem 0;
+
 }
 
 .carta .description {
@@ -300,7 +302,7 @@ main {
 }
 
 .toggle-btn:hover {
-  background: rgb(211, 12, 128);
+  background: darkred;
 }
 
 /* Diseño responsivo para móviles */
@@ -428,6 +430,7 @@ main {
   overflow: hidden;
   text-align: center;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+ 
 }
 
 .tarjeta img {
