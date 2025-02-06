@@ -1,0 +1,747 @@
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+
+/* Header fijo */
+.header-fijo {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color:hsl(318, 75%, 39%);;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.logo-container {
+  display: flex; /* Organiza los elementos en línea */
+  align-items: center; /* Centra los elementos verticalmente */
+  position: relative; /* Necesario para la posición absoluta del logo */
+}
+.logo-img {
+  height: 270px; /* Haz el logo más grande */
+  width: auto; /* Mantén las proporciones */
+  position: absolute; /* Permite que el logo sobresalga del contenedor */
+  top: 50%; /* Ajusta la posición del logo dentro del header */
+  transform: translateY(-50%); /* Centra el logo verticalmente en el header */
+  left: 20px; /* Ajusta según el espacio deseado desde el borde izquierdo */
+}
+
+.logo-text {
+  font-family: 'Sacramento', cursive;
+  margin-left: 200px; /* Agrega espacio para que el texto no se solape con el logo */
+  font-size: 40px; /* Ajusta el tamaño de la fuente */
+  color: white; /* Cambia el color del texto */
+  white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+  position: relative; /* Permite mover el texto sin afectar al logo */
+  top: -29px; /* Ajusta el valor para moverlo más arriba o más abajo */
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.menu li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Menú Móvil */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: rgba(129, 35, 111, 0.95);
+  z-index: 1000;
+  transition: left 0.3s ease;
+}
+
+.mobile-menu.active {
+  left: 0;
+}
+
+.mobile-menu .close-icon {
+  font-size: 20px;
+  align-self: flex-end;
+  cursor: pointer;
+  padding: 20px;
+}
+
+
+/* Elimina los puntos de lista para todos los menús */
+ul, li {
+  list-style: none; /* Elimina los puntos */
+  margin: 0; /* Resetea márgenes */
+  padding: 0; /* Resetea padding */
+}
+
+/* Estilo para el menú móvil */
+.mobile-menu ul {
+  list-style: none; /* Elimina los puntos de viñeta del menú móvil */
+}
+
+.mobile-menu li {
+  margin: 0; /* Resetea cualquier margen predeterminado */
+  padding: 0.5rem 0; /* Ajusta el espacio entre los elementos del menú */
+}
+
+.mobile-menu a {
+  text-decoration: none; /* Elimina el subrayado */
+  color: white; /* Define un color para los enlaces */
+  display: block; /* Asegura que ocupen todo el ancho disponible */
+  padding: 0.5rem 1rem; /* Espaciado interno para los enlaces */
+}
+
+  
+
+.menu-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px; /* Asegúrate de que tenga tamaño suficiente */
+  height: 50px;
+  cursor: pointer;
+  color: #FFFFFF;
+  position: relative; /* Evita que sea afectado por otros elementos */
+  z-index: 1001; /* Asegúrate de que esté sobre el resto del contenido */
+}
+
+.mobile-menu .close-icon {
+  font-size: 30px; /* Aumenta el tamaño de la "X" */
+  color: white; /* Asegúrate de que sea visible */
+  cursor: pointer;
+  padding: 20px;
+  background-color: rgba(129, 35, 111, 1); /* Contrasta más el fondo */
+   text-align: center;
+  margin: 10px; /* Separa la "X" de los bordes */
+}
+
+main {
+  margin-top: 80px; /* Ajusta al tamaño del header */
+  padding: 20px; /* Espaciado interno para el contenido */
+}
+
+
+/* Responsividad para pantallas de móviles y tabletas */
+@media (max-width: 768px) {
+  /* Ícono del menú */
+  header .menu-icon {
+    display: block;
+   
+  }
+
+  /* Navegación de escritorio */
+  header .desktop-nav {
+    display: none;
+  }
+
+  /* Ocultar el menú por defecto en pantallas pequeñas */
+  .menu {
+    display: none; /* Oculta el menú en pantallas pequeñas */
+  }
+
+  /* Ajustar el logo */
+  .logo-img {
+    height: 150px; /* Reduce el tamaño del logo */
+    width: auto; /* Mantiene la proporción */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px; /* Ajusta el margen izquierdo */
+  }
+
+  /* Ajustar el texto del logo */
+  .logo-text {
+    font-size: 24px; /* Reduce el tamaño del texto */
+    margin-left: 85px; /* Elimina el margen izquierdo */
+    top: -25px; /* Ajusta la posición del texto */
+  }
+
+  /* Alinear el logo y el texto en columna en dispositivos pequeños */
+  .logo-container {
+    flex-direction: column; /* Pone el logo y texto uno debajo del otro */
+    align-items: center; /* Centra los elementos */
+  }
+}
+
+
+  main {
+    margin-top: 100px; /* Más espacio si el header ocupa más área */
+  }
+
+  .beneficios-contenedor {
+    grid-template-columns: 1fr;
+  }
+
+  .contenedor-testimonios .testimonio {
+    width: 100%;
+  }
+
+  .faq-container .faq-item {
+    width: 100%;
+  }
+/* Ajustes específicos solo para la imagen (esquema-img) en pantallas pequeñas */
+@media (max-width: 1024px) {
+  .esquema-img {
+    width: 100vw; /* Ocupar todo el ancho de la pantalla */
+    height: auto; /* Mantener la proporción de la imagen */
+    max-width: none; /* Sin límite de ancho */
+    padding: 0; /* Eliminar relleno */
+    margin: 0; /* Eliminar márgenes */
+    object-fit: cover; /* Asegura que la imagen cubra todo el espacio sin distorsionarse */
+  }
+}
+
+/* Estilo para el contenedor del video */
+.video-container {
+  position: relative; /* Necesario para posicionar el texto encima del video */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+
+/* Estilo para el texto encima del video */
+.video-texto {
+  position: absolute; /* Posiciona el texto encima del video */
+  top: 50%; /* Centra el texto verticalmente */
+  left: 50%; /* Centra el texto horizontalmente */
+  transform: translate(-50%, -50%); /* Ajusta el centro exacto */
+  color: white; /* Color del texto */
+  font-size: 2.0rem; /* Ajusta el tamaño del texto */
+  font-weight: normal; /* Puedes elegir el peso que prefieras */
+  text-align: justify; /* Justifica el texto */
+  padding: 0 20px; /* Espaciado dentro del contenedor para que el texto no toque los bordes */
+  width: 90%; /* Ajusta el ancho del contenedor del texto */
+  box-sizing: border-box; /* Asegura que el ancho se calcule correctamente */
+  line-height: 1.6; /* Espaciado entre líneas */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6); /* Sombra de texto */
+}
+
+/* Responsivo para pantallas pequeñas (móviles y tabletas) */
+@media (max-width: 768px) {
+  .video-texto {
+    font-size: 1.2rem; /* Ajusta el tamaño del texto en pantallas pequeñas */
+    width: 90%; /* El texto ocupa más espacio en pantallas pequeñas */
+    top: 60%; /* Mueve un poco más abajo el texto para evitar que se sobreponga a otras áreas */
+  }
+}
+
+/* Responsivo para pantallas muy pequeñas (móviles) */
+@media (max-width: 480px) {
+  .video-texto {
+    font-size: 0.8rem; /* Texto más pequeño en pantallas muy pequeñas */
+    width: 95%; /* Aumenta el ancho para que ocupe casi toda la pantalla */
+    padding: 0 10px; /* Menos padding en pantallas pequeñas */
+    top: 40%; /* Ajuste de la posición vertical del texto */
+  }
+}
+
+/* Contenedores de video (familia y constelaciones) */
+.video-container,
+.video-familia,
+.esquema-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  width: 100%; /* Usar todo el ancho disponible */
+  height: auto;
+  max-width: 100%; /* Eliminar límites de ancho */
+  padding: 0; /* Eliminar posibles rellenos */
+  box-sizing: border-box; /* Asegura que el ancho total se calcule incluyendo los bordes y el padding */
+}
+
+/* Asegurarse que los videos e imágenes se adapten correctamente */
+.video-transgeneracional,
+.video-constelaciones,
+.video-familiar,
+.esquema-img {
+  width: 100%; /* Ocupar todo el ancho */
+  height: auto; /* Mantener la proporción */
+  max-width: none; /* Sin límite de ancho */
+  object-fit: cover; /* Asegura que la imagen cubra completamente el contenedor sin estirarse */
+}
+
+/* Ajustes para pantallas más pequeñas (Móviles y tabletas) */
+@media (max-width: 1024px) {
+  .video-transgeneracional {
+    width: 100vw; /* Ocupar todo el ancho de la pantalla */
+    height: auto; /* Mantener la proporción de la imagen o video */
+    max-width: none; /* Sin límite de ancho */
+    padding: 0; /* Eliminar relleno */
+  }
+}
+
+/* Estilo para los enlaces */
+a {
+  color: hsl(319, 100%, 57%);
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: hsl(327, 84%, 45%);
+}
+
+/* Estilo para el texto general */
+.texto-container,
+.bienvenida,
+.familia-contenedor {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  font-size: 1.5rem;
+  text-align: justify;
+  padding: 10px;
+}
+
+/* Estilo para el texto dentro de la imagen en esquema (igual que los videos) */
+.esquema-contenedor p {  /* Si el texto está en un <p> dentro de .esquema-img */
+  font-family: 'Arial', sans-serif;  /* Mismo tipo de letra */
+  color: #333;  /* Mismo color */
+  font-size: 1rem;  /* Mismo tamaño de letra */
+  line-height: 1.6;  /* Igual altura de línea */
+  text-align: justify;  /* Alineación del texto */
+  padding: 10px;  /* Mismo espaciado */
+}
+
+/* Estilo para el título dentro de la sección esquema */
+.esquema-contenedor h2 { /* Aplica a los títulos h2 dentro de .esquema-contenedor */
+  font-family: 'Arial', sans-serif;  /* Mismo tipo de letra */
+  color: #333;  /* Mismo color */
+  font-size: 2rem;  /* Tamaño del título */
+  font-weight: bold;  /* Negrita */
+  text-align: center;  /* Centra el título */
+  margin-bottom: 20px;  /* Espacio debajo del título */
+}
+
+/* Ajustes para los títulos de bienvenida */
+.bienvenida h1,
+.familia-contenedor h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: hsl(319, 100%, 57%);
+  margin-bottom: 20px;
+}
+
+/* Contenedor de los botones */
+.enlaces-container {
+  display: flex; /* Alinea los botones horizontalmente */
+  justify-content: center; /* Centra los botones */
+  gap: 20px; /* Añade espacio entre los botones */
+  margin-top: 20px; /* Añade espacio en la parte superior */
+}
+
+/* Estilo de los botones (sin `width: 100%`) */
+.btn-cta {
+  background-color: hsl(319, 100%, 57%);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover en los botones */
+.btn-cta:hover {
+  background-color: hsl(321, 86%, 49%);
+}
+
+/* Ajustes para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .enlaces-container {
+    flex-direction: column; /* Cambia la dirección de los botones a columna */
+    align-items: center; /* Alinea los botones al centro */
+  }
+
+  .btn-cta {
+    margin-bottom: 10px; /* Añade espacio entre los botones */
+  }
+}
+
+/* Ajustes para pantallas muy pequeñas (móviles) */
+@media (max-width: 480px) {
+  .enlaces-container {
+    gap: 10px; /* Menos espacio entre los botones en pantallas pequeñas */
+  }
+
+  .btn-cta {
+    font-size: 0.9rem; /* Reduce el tamaño de los botones */
+    padding: 0.6rem 1.2rem; /* Ajusta el tamaño del padding */
+  }
+}
+
+/* TITULO DE TRANGENERACIONAL */
+.transgeneracional-contenedor h2 {
+  text-align: center;
+  font-size: 1.8rem; 
+  margin: 0; /* Elimina cualquier margen predeterminado */
+  padding: 0; /* Elimina el relleno para evitar desalineaciones */
+}
+
+/* Clase para centrar texto */
+.centrado {
+  text-align: justify;
+  font-size: 1.8rem; /* Ajusta el tamaño de la fuente en pantallas más pequeñas */
+}
+/* Responsivo para tabletas y móviles */
+@media (max-width: 768px) {
+  .transgeneracional-contenedor h2 {
+    font-size: 1.8rem; /* Ajusta el tamaño de la fuente en pantallas más pequeñas */
+    text-align: center; /* Asegúrate de que se mantenga centrado */
+    margin: 0 20px; /* Añadir un pequeño margen a los lados para evitar que toque los bordes */
+  }
+}
+
+@media (max-width: 480px) {
+  .transgeneracional-contenedor h2 {
+    font-size: 1.5rem; /* Reduce el tamaño en pantallas más pequeñas */
+    margin: 0 10px; /* Ajusta el margen en dispositivos más pequeños */
+  }
+}
+
+
+.esquema{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: url('background.jpg') no-repeat center center/cover;
+  color: black;
+  text-align: center;
+}
+.esquema-img{
+  width: 90%; /* Establece el ancho al 60% del contenedor */
+  height: auto; /* Mantén las proporciones de la imagen */
+  display: block; /* Asegura que se comporte como un bloque para centrado */
+  margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+.contenido{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: url('background.jpg') no-repeat center center/cover;
+  color: black;
+  text-align: center;
+}
+.contenid-img{
+  width: 40%; /* Establece el ancho al 60% del contenedor */
+  height: auto; /* Mantén las proporciones de la imagen */
+  display: block; /* Asegura que se comporte como un bloque para centrado */
+  margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+/* Ajustes para pantallas de tabletas */
+@media (max-width: 1024px) {
+  .contenido {
+    padding: 1.5rem;
+  }
+
+  .contenid-img {
+    width: 50%; /* Ajusta el tamaño de la imagen para pantallas medianas */
+  }
+}
+
+/* Ajustes para pantallas móviles */
+@media (max-width: 768px) {
+  .contenido {
+    padding: 1rem;
+  }
+
+  .contenido-img {
+    width: 70%; /* Ajusta el tamaño de la imagen para pantallas móviles */
+  }
+}
+.btn-cta {
+  background-color: hsl(319, 100%, 57%);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  display: inline-block;
+  width: 200px; /* Ajusta el ancho según lo necesites */
+  text-align: center;
+}
+
+#beneficios {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f7f0eb; /* Ajusta al color de fondo de la sección si es necesario */
+}
+
+.beneficios-contenedor {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Crea 4 columnas iguales */
+  gap: 20px; /* Espacio entre las tarjetas */
+  justify-items: center; /* Centra las tarjetas horizontalmente */
+}
+
+/* Tarjetas con movimiento */
+.razones-invertir {
+  text-align: center;
+}
+.contenedor-razones {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ajuste responsivo */
+  gap: 20px; /* Espaciado entre tarjetas */
+  justify-content: center;
+  align-items: stretch;
+}
+
+/* Estilo para cada tarjeta */
+.tarjeta {
+  background: #fff;
+  color: #333;
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.tarjeta img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.tarjeta:hover {
+  transform: translateY(-10px) scale(1.1); /* Efecto de levitación y crecimiento */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
+}
+
+.contenido-tarjeta {
+  padding: 15px;
+  color: #333;
+}
+
+.contenido-tarjeta h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #0d203b; /* Azul oscuro */
+}
+
+.contenido-tarjeta p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+  .contenedor-razones {
+      grid-template-columns: 1fr; /* Una columna en móviles */
+      gap: 15px;
+  }
+
+  .tarjeta {
+      width: 100%; /* Asegura que ocupe todo el ancho del contenedor */
+  }
+}
+
+
+.talleres{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: url('background.jpg') no-repeat center center/cover;
+  color: black;
+  text-align: center;
+}
+.talleres-img{
+  width: 60%; /* Establece el ancho al 60% del contenedor */
+  height: auto; /* Mantén las proporciones de la imagen */
+  display: block; /* Asegura que se comporte como un bloque para centrado */
+  margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+
+.testimonios {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f9f9f9; /* Fondo claro */
+}
+
+.titulo-testimonios {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.subtitulo-testimonios {
+  font-size: 16px;
+  color: #777;
+  margin-bottom: 30px;
+}
+
+.contenedor-testimonios {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.testimonio {
+  background-color: #fff; /* Fondo blanco */
+  border: 1px solid #ddd; /* Borde tenue */
+  border-radius: 8px;
+  padding: 20px;
+  width: calc(50% - 20px); /* Dos columnas */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: transform 0.3s;
+}
+
+.testimonio:hover {
+  transform: translateY(-5px); /* Efecto al pasar el cursor */
+}
+
+.texto-testimonio {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.autor-testimonio {
+  font-size: 14px;
+  color: #555;
+  font-weight: bold;
+}
+
+.faq {
+  text-align: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.faq-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.faq-highlight {
+  color: #ff00ae;
+}
+
+.faq-subtitle {
+  font-size: 16px;
+  color: #555;
+}
+
+.faq-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.faq-item {
+  width: calc(50% - 15px);
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.faq-item:hover {
+  transform: scale(1.03);
+}
+
+.faq-question {
+  padding: 15px 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+
+.faq-icon {
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+.faq-answer {
+  padding: 15px 20px;
+  background-color: #fff;
+  border-top: 1px solid #e0e0e0;
+  display: none;
+  text-align: left;
+}
+
+.faq-item.open .faq-answer {
+  display: block;
+}
+
+.faq-item.open .faq-icon {
+  transform: rotate(45deg);
+}
+
+/* Footer */
+.footer {
+  background-color: hsl(318, 75%, 39%);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-enlaces {
+  display: flex;
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente, si es necesario */
+}
+/* Estilo del botón flotante de WhatsApp */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px; /* Espaciado desde abajo */
+  right: 20px; /* Ajuste de posición para evitar superposición */
+  z-index: 1001; /* Asegurar que esté sobre otros elementos */
+  width: 60px; /* Tamaño del botón */
+  height: 60px;
+  background-color: #25d366;
+  border-radius: 50%; /* Forma circular */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: float-whatsapp 2s infinite;
+  cursor: pointer;
+}
+
+/* Ícono de WhatsApp */
+.whatsapp-float img {
+  width: 35px;
+  height: 35px;
+}
+
+/* Animación flotante específica de WhatsApp */
+@keyframes float-whatsapp {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-10px);
+  }
+}

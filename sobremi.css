@@ -53,6 +53,7 @@
   font-weight: bold;
 }
 
+
 /* Menú Móvil */
 .mobile-menu {
   position: fixed;
@@ -75,7 +76,6 @@
   cursor: pointer;
   padding: 20px;
 }
-
 
 
 /* Elimina los puntos de lista para todos los menús */
@@ -102,6 +102,7 @@ ul, li {
   padding: 0.5rem 1rem; /* Espaciado interno para los enlaces */
 }
 
+  
 .menu-icon {
   display: flex;
   align-items: center;
@@ -211,102 +212,172 @@ main {
     }
   }
  
-  
-  
-  .section {
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .icons {
+
+/*primera seccion de informacion*/
+
+.separator {
     display: flex;
+    align-items: center;
     justify-content: center;
+    gap: 10px;
+}
+
+.separator hr {
+    width: 40px;
+    border: 1px solid #f2c4e5;
+}
+
+/* Ajustes para la sección Imagine */
+.imagine {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    background-color: #f9f9f9;
     gap: 20px;
-    flex-wrap: wrap;
-  }
-  
-  .icon {
-    background: #f7f4ff;
-    padding: 15px;
-    border-radius: 8px;
-    max-width: 200px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave para transform y box-shadow */
-  }
-  .icon:hover {
-    transform: translateY(-10px) scale(1.1); /* Efecto de levitación y crecimiento */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
-  }
-  
-  .icon h3 {
-    color: #a35de1;
-  }
-  .icon img {
-    width: 50px; /* Ajusta el tamaño según sea necesario */
-    height: auto; /* Mantiene la proporción de la imagen */
-    display: block; /* Asegura un buen alineamiento */
-    margin: 0 auto 10px; /* Centra la imagen y agrega espacio inferior */
-  }
-  
-  .highlight {
-    background: #e8f0ff;
-    margin: 20px 0;
-    padding: 15px;
-  }
-  
-  .cta {
-    background: #f2e1ff;
-    padding: 20px;
-    border-radius: 10px;
-  }
-  
-  .cta img {
-    width: 50px;
-    margin-bottom: 10px;
-  }
-  
-  .form {
-    margin: 20px;
-  }
-  /* Ajuste para el título */
-section.form h3 {
-    text-align: center; /* Centra el título */
-    margin-bottom: 15px; /* Espacio debajo del título */
-  }
-  
-  /* Ajuste para el párrafo */
-  section.form p {
-    text-align: center; /* Centra el texto del párrafo */
-    margin-bottom: 20px; /* Espacio debajo del párrafo */
-    font-size: 16px; /* Tamaño de fuente ajustable */
-  }
-  form input, form textarea, form button {
-    display: block;
-    width: 100%;
-    margin: 10px 0;
-    padding: 10px;
-  }
-  
-  form button {
-    background: #a35de1;
-    color: white;
-    border: none;
+}
+
+.imagine .content {
+    flex: 1;
+    order: 2; /* Mueve el texto a la derecha */
+    text-align: left;
+}
+
+.imagine .image {
+    flex: 1;
+    order: 1; /* Mueve la imagen a la izquierda */
+}
+
+.imagine .image img {
+    max-width: 100%;
     border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  form button:hover {
-    background: #933bd8;
-  }
-  
-  .cta video {
-    width: 150px; /* Tamaño similar al de un ícono */
-    height: 150px; /* Mantiene la proporción cuadrada */
-    margin-top: 10px; /* Espacio entre el texto y el video */
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2); /* Sombra */
-    
-  }
-  
+}
+
+/* Responsivo (en móviles, la imagen irá arriba del texto) */
+@media screen and (max-width: 768px) {
+    .imagine {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .imagine .image, .imagine .content {
+        order: initial; /* Imagen arriba, texto abajo */
+    }
+
+   
+}
+
+/* Estilo para la lista de la sección .imagine */
+.imagine .content ul {
+    padding: 0;
+    margin: 0;
+}
+
+/* Reemplazar los puntos con una imagen como marcador */
+.imagine .content ul li {
+    list-style-type: none; /* Elimina los puntos predeterminados */
+    background-image: url('iconosol.png'); /* Ruta de la imagen de paloma o flor */
+    background-size: 20px 20px; /* Ajusta el tamaño de la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    padding-left: 30px; /* Espaciado para que el texto no se superponga con la imagen */
+    margin-bottom: 15px; /* Espaciado entre los elementos */
+}
+
+/* Responsivo (ajuste en móviles) */
+@media screen and (max-width: 768px) {
+    .imagine .content ul li {
+        background-size: 15px 15px; /* Ajusta el tamaño de la imagen para móviles */
+    }
+}
+
+.note {
+    background-color: #eaeff4;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.1rem;
+    margin: 30px 0;
+}
+/* sobre mi */
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    padding: 30px;
+    background-color: #fff;
+    align-items: center; /* Alinea todo al centro */
+    justify-content: center; /* Alinea todo al centro */
+}
+
+.about img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.about .text {
+    flex: 1;
+    max-width: 500px;
+}
+
+.about .text h2 {
+    font-size: 1.8rem;
+    color: #7c2d7d;
+}
+
+.about .text p {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #555;
+}
+/* Centrar el botón de contacto */
+.btn-cta {
+  display: block;
+  width: 200px;  /* Ancho del botón, ajusta según tu preferencia */
+  margin: 20px auto;  /* Esto lo centra horizontalmente */
+  padding: 10px 20px;  /* Espaciado interno del botón */
+  text-align: center;  /* Alineación del texto dentro del botón */
+  background-color: #007BFF;  /* Color de fondo (puedes cambiarlo) */
+  color: white;  /* Color del texto */
+  text-decoration: none;  /* Quita el subrayado */
+  border-radius: 5px;  /* Bordes redondeados */
+  font-size: 1.2em;  /* Tamaño de la letra */
+  transition: background-color 0.3s ease;  /* Efecto de transición para el hover */
+}
+
+/* Efecto al pasar el ratón sobre el botón */
+.btn-cta:hover {
+  background-color: #0056b3;  /* Color de fondo cuando el ratón está sobre el botón */
+}
+
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+    .imagine {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .imagine .content, .imagine .image {
+        flex: unset;
+        max-width: 100%;
+    }
+
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about img {
+        margin-bottom: 20px;
+    }
+
+    .about .text {
+        max-width: 100%;
+    }
+}  
+
 /* Bienvenida */
 .transgeneracional {
   display: flex;
@@ -489,7 +560,7 @@ section.form h3 {
 }
 
 .subtitulo-testimonios {
-  font-size: 16px;
+  font-size: 26px;
   color: #777;
   margin-bottom: 30px;
 }
@@ -516,13 +587,13 @@ section.form h3 {
 }
 
 .texto-testimonio {
-  font-size: 16px;
+  font-size: 24px;
   color: #333;
   margin-bottom: 15px;
 }
 
 .autor-testimonio {
-  font-size: 14px;
+  font-size: 20px;
   color: #555;
   font-weight: bold;
 }

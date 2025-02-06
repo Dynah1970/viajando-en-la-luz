@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bienvenidos a Talleres de Constelaciones</title>
+  <link rel="stylesheet" href="styles.css">
+ 
+</head>
+<body>
+      
+    
+  <header class="header-fijo"> <!-- Aquí va la clase "header-fijo" -->
+    <!-- Ícono del menú hamburguesa (solo visible en móviles y tabletas) -->
+    <div id="menu-icon" class="menu-icon" style="font-size: 2.5rem; cursor: pointer; color: #FFFFFF;">&#9776;</div>
+  
+    
+  
+    <nav class="navbar">
+      <div class="logo">
+        <img src="logo2.png" alt="Logo Talleres de Constelaciones" class="logo-img">
+        <span class="logo-text">Viajando en la luz</span>
+      </div>
+     
+      <ul class="menu" id="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="trangeneracional..html">Trasgeneracional</a></li>
+        <li><a href="constelaciones.html">constelaciones</a></li>
+        <li><a href="sobremi.html">sobre mi</a></li>
+      
+        <li><a href="talleres.html">Talleres</a></li>
+        <li><a href="terapias.html">terapias</a></li>
+        <li><a href="blog.html">blog</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+    <div id="mobile-menu" class="mobile-menu">
+      <div id="close-icon" class="close-icon">&times;</div>
+      <nav class="mobile-nav">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="trangeneracional..html">Trasgeneracional</a></li>
+        <li><a href="constelaciones.html">constelaciones</a></li>
+        <li><a href="sobremi.html">sobre mi</a></li>
+      
+        <li><a href="talleres.html">Talleres</a></li>
+        <li><a href="terapias.html">terapias</a></li>
+        <li><a href="blog.html">blog</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+       
+   
+  </header>
+
+  
+<main>
+ <!-- Sección: Bienvenida -->
+  <br><br>
+  <section id="inicio" class="section bienvenida">
+    <div class="bienvenida-contenedor">
+      <div class="video-container">
+        <video class="video-constelaciones" autoplay muted loop controls>
+          <source src="familiavideo.mp4" type="video/mp4">
+          Tu navegador no soporta el elemento de video.
+        </video>
+        <!-- Contenedor para el texto encima del video -->
+        <div class="video-texto">
+          <p>"Descubre el poder de las Constelaciones Familiares. Una herramienta profunda que te permite liberar patrones ocultos, sanar heridas del pasado y transformar tu presente. Conecta con tu historia, equilibra tus relaciones y encuentra el bienestar que mereces."</p>
+        </div>
+      </div>
+      <div class="texto-container">
+        <p>
+            Las Constelaciones Familiares nos muestran que muchas de las dificultades que enfrentamos en nuestra vida tienen su origen en dinámicas familiares inconscientes. A través de esta terapia, es posible reconocer y sanar esos patrones que nos limitan, permitiendo que el amor y el orden fluyan nuevamente en nuestro sistema familiar.
+
+            Los talleres grupales permiten trabajar estas dinámicas en un entorno seguro y guiado, donde los participantes pueden constelar sus propias situaciones o representar elementos en las constelaciones de otros. En estos encuentros, se revelan las conexiones ocultas que influyen en nuestras relaciones, ayudando a liberar cargas emocionales y brindando claridad para afrontar la vida desde una nueva perspectiva.
+            
+            Para quienes buscan un espacio más privado, la terapia individual ofrece la oportunidad de profundizar en sus propios procesos de manera personalizada. Mediante ejercicios simbólicos y representaciones, se pueden identificar bloqueos internos y encontrar soluciones que permitan una mayor paz y armonía en la vida cotidiana.
+            
+            Las Constelaciones Familiares son un camino de comprensión y sanación que permite transformar la relación con uno mismo y con los demás. Si buscas respuestas, equilibrio y bienestar, esta herramienta puede abrirte la puerta a una nueva forma de vivir.  </p>
+        <h2>¡Atrévete a dar el primer paso hacia tu transformación!"
+       </h2>
+      </div>
+      <!-- Enlaces en la misma fila -->
+      <div class="enlaces-container">
+        <a href="talleres.html" class="btn-cta">Talleres</a>
+        <a href="constelaciones.html" class="btn-cta">Terapia</a> <!-- Nuevo enlace -->
+      </div>
+    </div>
+  </section>
+  
+  <section class="faq">
+    <h2 class="faq-title">Preguntas <span class="faq-highlight">frecuentes</span></h2>
+    <h2>Despeja todas tus dudas</h2>
+
+    <div class="faq-container">
+      <!-- Constelaciones Familiares -->
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          ¿Qué son las constelaciones familiares?
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          Las constelaciones familiares son una terapia sistémica que busca identificar y sanar patrones o traumas heredados de generaciones anteriores, promoviendo el bienestar del individuo dentro de su familia.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          ¿Cómo funcionan las constelaciones familiares?
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          Las constelaciones funcionan al representar simbólicamente a los miembros de la familia, lo que permite identificar dinámicas ocultas y generar soluciones a nivel emocional y energético.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          ¿Puedo realizar constelaciones familiares sin conocer la historia de mi familia?
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          Aunque puede ser útil conocer algunos aspectos de tu árbol genealógico, las constelaciones familiares pueden trabajar con la información energética que surge durante la sesión.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          ¿Las constelaciones familiares pueden resolver conflictos de relaciones?
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          Sí, las constelaciones ayudan a resolver conflictos en las relaciones familiares al revelar patrones subyacentes que afectan la dinámica entre los miembros de la familia.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          ¿Cuántas sesiones de constelaciones familiares necesito?
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          El número de sesiones depende de cada persona y situación, pero algunas personas experimentan cambios significativos después de una sola sesión.
+        </div>
+      </div>
+
+      <!-- Terapia Transgeneracional -->
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          ¿Puedo constelar cualquier situación o solo temas familiares?
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          Aunque el enfoque principal es el sistema familiar, también se pueden constelar situaciones laborales, problemas de salud, conflictos personales y bloqueos emocionales.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          ¿Qué papel juegan los representantes en una Constelación?
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          Los representantes son personas que, al ser elegidas para ocupar un lugar en la constelación, sienten y expresan emociones o actitudes del miembro familiar que representan. Esto permite ver dinámicas ocultas.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          ¿Es necesario creer en algo específico para que funcione?
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          No. Las Constelaciones funcionan independientemente de las creencias del consultante, ya que trabajan con el inconsciente y los órdenes sistémicos.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          ¿Se pueden hacer Constelaciones Familiares de forma individual o solo en grupo?
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          Se pueden hacer de ambas formas. En sesiones individuales, se utilizan muñecos, anclajes o visualización guiada para representar a los miembros del sistema.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          ¿Cómo me sentiré después de una sesión de Constelaciones Familiares?
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          Cada persona reacciona de manera diferente. Algunos experimentan alivio inmediato, mientras que otros atraviesan un proceso de integración emocional que puede durar días o semanas.
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+</main> 
+  
+  
+
+
+
+ <!-- Botón de WhatsApp -->
+ <a href=https://wa.me/525520717651?text=Hola,%20me%20gustaría%20saber%20más%20sobre%20sus%20propiedades
+ class="whatsapp-float" target="_blank" title="Contacta por WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
+  <!-- Footer -->
+  <footer class="footer">
+   
+    <div class="footer-enlaces">
+        <ul class="menu" id="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="trangeneracional..html">Trasgeneracional</a></li>
+            <li><a href="constelaciones.html">constelaciones</a></li>
+            <li><a href="sobremi.html">sobre mi</a></li>
+          
+            <li><a href="talleres.html">Talleres</a></li>
+            <li><a href="terapias.html">terapias</a></li>
+            <li><a href="blog.html">blog</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+      
+    </div>
+    <div class="footer-info">
+        <p>&copy; 2025 Talleres de Constelaciones. Todos los derechos reservados.</p>
+      </div>
+  </footer>
+  <script src="script.js" defer></script>
+</body>
+</html>

@@ -191,98 +191,168 @@ main {
   .faq-container .faq-item {
     width: 100%;
   }
-
-  .video-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0;
-    width: 100%;
-    height: auto;
-    max-width: 100%;
-  }
   
-  .video-constelaciones{
-    width: 100%;
-    height: auto;
-    max-width: none;  /* Esto es para limitar el tamaño máximo en pantallas grandes */
-  }
-  @media (max-width: 768px) {
-    .video-tconstelaciones {
-      max-width: 100%; /* Asegura que el video ocupe todo el ancho en pantallas pequeñas */
-    }
-  }
-    
-/* Bienvenida */
-.bienvenida {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1.5rem; /* Tamaño más grande */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
-  background: url('background.jpg') no-repeat center center/cover;
-  color: black;
-  text-align: justify;
-  text-align: center;
-}
-.imagen-bienvenida {
-  width: 40%; /* Establece el ancho al 60% del contenedor */
-  height: auto; /* Mantén las proporciones de la imagen */
-  display: block; /* Asegura que se comporte como un bloque para centrado */
-  margin: 0 auto; /* Centra la imagen horizontalmente */
-}
-.esquema{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
-  background: url('background.jpg') no-repeat center center/cover;
-  color: black;
-  text-align: center;
-}
-.esquema-img{
-  width: 90%; /* Establece el ancho al 60% del contenedor */
-  height: auto; /* Mantén las proporciones de la imagen */
-  display: block; /* Asegura que se comporte como un bloque para centrado */
-  margin: 0 auto; /* Centra la imagen horizontalmente */
-}
-.contenido{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
-  background: url('background.jpg') no-repeat center center/cover;
-  color: black;
-  text-align: center;
-}
-.contenid-img{
-  width: 40%; /* Establece el ancho al 60% del contenedor */
-  height: auto; /* Mantén las proporciones de la imagen */
-  display: block; /* Asegura que se comporte como un bloque para centrado */
-  margin: 0 auto; /* Centra la imagen horizontalmente */
-}
-/* Ajustes para pantallas de tabletas */
+/* Ajustes específicos solo para la imagen (esquema-img) en pantallas pequeñas */
 @media (max-width: 1024px) {
-  .contenido {
-    padding: 1.5rem;
-  }
-
-  .contenid-img {
-    width: 50%; /* Ajusta el tamaño de la imagen para pantallas medianas */
+  .esquema-img {
+    width: 100vw; /* Ocupar todo el ancho de la pantalla */
+    height: auto; /* Mantener la proporción de la imagen */
+    max-width: none; /* Sin límite de ancho */
+    padding: 0; /* Eliminar relleno */
+    margin: 0; /* Eliminar márgenes */
+    object-fit: cover; /* Asegura que la imagen cubra todo el espacio sin distorsionarse */
   }
 }
+/* Estilo para el contenedor del video */
+.video-container {
+  position: relative; /* Necesario para posicionar el texto encima del video */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
 
-/* Ajustes para pantallas móviles */
+.texto-container h2 {
+  text-align: center; /* Centra el título */
+}
+/* Estilo para el texto encima del video */
+.video-texto {
+  position: absolute; /* Posiciona el texto encima del video */
+  top: 50%; /* Centra el texto verticalmente */
+  left: 50%; /* Centra el texto horizontalmente */
+  transform: translate(-50%, -50%); /* Ajusta el centro exacto */
+  color: white; /* Color del texto */
+  font-size:2.0rem; /* Ajusta el tamaño del texto */
+  font-weight: normal; /* Puedes elegir el peso que prefieras */
+  text-align: justify; /* Justifica el texto */
+  padding: 0 20px; /* Espaciado dentro del contenedor para que el texto no toque los bordes */
+  width:90%; /* Ajusta el ancho del contenedor del texto */
+  box-sizing: border-box; /* Asegura que el ancho se calcule correctamente */
+  line-height: 1.6; /* Espaciado entre líneas */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6); /* Sombra de texto */
+  
+}
+
+/* Responsivo para pantallas pequeñas (móviles y tabletas) */
 @media (max-width: 768px) {
-  .contenido {
-    padding: 1rem;
-  }
-
-  .contenido-img {
-    width: 70%; /* Ajusta el tamaño de la imagen para pantallas móviles */
+  .video-texto {
+    font-size: rem; /* Ajusta el tamaño del texto en pantallas pequeñas */
+    width: 90%; /* El texto ocupa más espacio en pantallas pequeñas */
+    top: 60%; /* Mueve un poco más abajo el texto para evitar que se sobreponga a otras áreas */
   }
 }
+/* Responsivo para pantallas muy pequeñas (móviles) */
+@media (max-width: 480px) {
+  .video-texto {
+    font-size: 0.8rem; /* Texto más pequeño en pantallas muy pequeñas */
+    width: 95%; /* Aumenta el ancho para que ocupe casi toda la pantalla */
+    padding: 0 10px; /* Menos padding en pantallas pequeñas */
+    top: 40%; /* Ajuste de la posición vertical del texto */
+  }
+}
+/* Contenedores de video (familia y constelaciones) */
+.video-container,
+.video-familia,
+.esquema-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  width: 100%; /* Usar todo el ancho disponible */
+  height: auto;
+  max-width: 100%; /* Eliminar límites de ancho */
+  padding: 0; /* Eliminar posibles rellenos */
+  box-sizing: border-box; /* Asegura que el ancho total se calcule incluyendo los bordes y el padding */
+}
+
+/* Asegurarse que los videos e imágenes se adapten correctamente */
+.video-constelaciones,
+.video-familiar,
+.esquema-img {
+  width: 100%; /* Ocupar todo el ancho */
+  height: auto; /* Mantener la proporción */
+  max-width: none; /* Sin límite de ancho */
+  object-fit: cover; /* Asegura que la imagen cubra completamente el contenedor sin estirarse */
+}
+
+/* Ajustes para pantallas más pequeñas (Móviles y tabletas) */
+@media (max-width: 1024px) {
+  .video-constelaciones,
+  .video-familiar {
+    width: 100vw; /* Ocupar todo el ancho de la pantalla */
+    height: auto; /* Mantener la proporción de la imagen o video */
+    max-width: none; /* Sin límite de ancho */
+    padding: 0; /* Eliminar relleno */
+  }
+}
+
+/* Estilo para los enlaces */
+a {
+  color: hsl(319, 100%, 57%);
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: hsl(327, 84%, 45%);
+}
+
+/* Estilo para el texto general */
+.texto-container,
+.bienvenida,
+.familia-contenedor {
+  font-family: 'Arial', sans-serif;
+
+  line-height: 1.6;
+  color: #333;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  text-align: justify;
+  padding: 10px;
+}
+
+/* Asegura que el estilo se aplique específicamente al <p> dentro de .esquema-contenedor */
+.esquema-contenedor .texto-container {
+  font-family: 'Arial', sans-serif !important;
+  font-size: 1.6rem !important; /* Asegura que este tamaño se aplique */
+  color: #333;
+  line-height: 1.6;
+  text-align: justify;
+  padding: 10px;
+}
+
+
+/* Estilo para el título dentro de la sección esquema */
+.esquema-contenedor h2 { /* Aplica a los títulos h2 dentro de .esquema-contenedor */
+  font-family: 'Arial', sans-serif;  /* Mismo tipo de letra */
+  color: #333;  /* Mismo color */
+  font-size: 2rem;  /* Tamaño del título */
+  font-weight: bold;  /* Negrita */
+  text-align: center;  /* Centra el título */
+  margin-bottom: 20px;  /* Espacio debajo del título */
+}
+/* Estilo para el texto dentro de esquema-contenedor */
+.esquema-contenedor {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  font-size: 1.8rem; /* Aumenta el tamaño de la fuente aquí */
+  text-align: justify;
+  padding: 10px;
+}
+
+/* Ajustes para los títulos de bienvenida */
+.bienvenida h1,
+.familia-contenedor h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: hsl(319, 100%, 57%);
+  margin-bottom: 20px;
+}
+
+/* Ajustes para los botones */
 .btn-cta {
   background-color: hsl(319, 100%, 57%);
   color: white;
@@ -290,7 +360,15 @@ main {
   text-decoration: none;
   border-radius: 5px;
   font-weight: bold;
+  text-align: center;
+  display: inline-block;
+  transition: background-color 0.3s ease;
 }
+
+.btn-cta:hover {
+  background-color: hsl(321, 86%, 49%);
+}
+
 #beneficios {
   text-align: center;
   padding: 40px 20px;
@@ -304,12 +382,99 @@ main {
   justify-items: center; /* Centra las tarjetas horizontalmente */
 }
 
+/* Contenedor para los enlaces */
+.enlaces-container {
+  display: flex;
+  justify-content: center; /* Centra los enlaces en la fila */
+  align-items: center; /* Centra los enlaces verticalmente */
+  gap: 20px; /* Espacio entre los enlaces */
+  margin-top: 20px; /* Espacio hacia abajo */
+  width: 100%; /* Asegura que ocupe todo el ancho */
+  padding: 0 20px; /* Añadimos un poco de espacio en los lados */
+  box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+  flex-wrap: wrap; /* Permite que los enlaces se ajusten en pantallas pequeñas */
+  justify-content: center; /* Asegura que estén centrados */
+}
+
+/* Estilo para los enlaces (botones) */
+.enlaces-container a {
+  background-color: hsl(319, 100%, 57%); /* Color de fondo */
+  color: white; /* Color del texto */
+  padding: 1rem 2rem; /* Añadir más tamaño al botón en horizontal */
+  text-decoration: none; /* Eliminar subrayado */
+  font-weight: bold; /* Poner texto en negrita */
+  border-radius: 5px; /* Bordes más rectos (eliminamos los bordes redondeados) */
+  text-align: center; /* Centrar el texto */
+  display: flex; /* Usamos flexbox para alinear el contenido */
+  justify-content: center; /* Centra el texto dentro del botón */
+  align-items: center; /* Centra verticalmente el texto */
+  min-width: 250px; /* Tamaño mínimo del botón para asegurarse de que ambos se vean igual */
+  transition: background-color 0.3s ease; /* Transición suave en hover */
+  font-size: 1.1rem; /* Tamaño del texto */
+  width: 100%; /* Permite que los botones se ajusten al ancho disponible */
+  max-width: 350px; /* Asegura que los botones no sean demasiado anchos */
+  box-sizing: border-box; /* Asegura que el ancho se calcule correctamente */
+  margin: 10px 0; /* Espacio entre los botones */
+}
+
+/* Efecto al pasar el mouse */
+.enlaces-container a:hover {
+  background-color: hsl(330, 100%, 50%); /* Cambiar color en hover */
+}
+
+/* Ajustes responsivos para pantallas pequeñas */
+@media (max-width: 768px) {
+  .enlaces-container {
+    flex-direction: column; /* Los enlaces se apilan uno sobre otro en pantallas pequeñas */
+    gap: 10px; /* Espacio reducido entre los enlaces */
+    justify-content: center; /* Centra los botones */
+    align-items: center; /* Centra los botones verticalmente */
+  }
+
+  .enlaces-container a {
+    min-width: 150px; /* Ajusta el tamaño mínimo para pantallas pequeñas */
+    width: 80%; /* Los botones ocupan el 80% del ancho en pantallas pequeñas */
+    max-width: 300px; /* Tamaño máximo para evitar que se estiren demasiado */
+  }
+}
+/* Contenedores de los enlaces en familia y esquema */
+.familia-contenedor,
+.esquema-contenedor {
+  text-align: center;  /* Centra el contenido dentro del contenedor */
+}
+
+/* Estilo para los enlaces */
+.familia-contenedor .btn-cta,
+.esquema-contenedor .btn-cta {
+  display: inline-block;
+  margin: 10px;
+  padding: 0.5rem 2rem; /* Reducir padding vertical */
+  min-width: 220px; 
+  background-color: hsl(319, 100%, 57%);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1rem; /* Opcional: reducir un poco la fuente */
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+
+/* Efecto hover para los botones */
+.familia-contenedor .btn-cta:hover,
+.esquema-contenedor .btn-cta:hover {
+  background-color: hsl(324, 100%, 50%);
+}
+
+
 /* Tarjetas con movimiento */
 .razones-invertir {
   text-align: center;
 }
 .contenedor-razones {
   display: grid;
+
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ajuste responsivo */
   gap: 20px; /* Espaciado entre tarjetas */
   justify-content: center;
@@ -341,18 +506,20 @@ main {
 .contenido-tarjeta {
   padding: 15px;
   color: #333;
+  
 }
 
 .contenido-tarjeta h3 {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   margin-bottom: 10px;
   font-weight: bold;
   color: #0d203b; /* Azul oscuro */
 }
 
 .contenido-tarjeta p {
-  font-size: 1rem;
+  font-size: 1.5rem;
   line-height: 1.6;
+  justify-content: center;
   color: #555;
 }
 
@@ -379,7 +546,7 @@ main {
   text-align: center;
 }
 .talleres-img{
-  width: 60%; /* Establece el ancho al 60% del contenedor */
+  width:80%; /* Establece el ancho al 60% del contenedor */
   height: auto; /* Mantén las proporciones de la imagen */
   display: block; /* Asegura que se comporte como un bloque para centrado */
   margin: 0 auto; /* Centra la imagen horizontalmente */

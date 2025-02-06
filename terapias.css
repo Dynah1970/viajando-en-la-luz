@@ -278,7 +278,7 @@ main {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
 }
 .toggle-btn {
-  background: red;
+  background: rgb(210, 10, 126);
   color: white;
   border: none;
   padding: 0.5rem 1rem;
@@ -289,7 +289,7 @@ main {
 }
 
 .toggle-btn:hover {
-  background: darkred;
+  background: rgb(226, 10, 140);
 }
 
 /* Diseño responsivo para móviles */

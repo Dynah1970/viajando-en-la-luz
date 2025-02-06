@@ -273,13 +273,23 @@ main {
   color: #666;
   margin: 0.5rem 0;
 }
+.carta .description h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-top: 1rem;
+}
+
+.carta .description ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+}
 
 .carta:hover {
   transform: translateY(-10px) scale(1.1); /* Efecto de levitación y crecimiento */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
 }
 .toggle-btn {
-  background: red;
+  background: rgb(222, 17, 133);
   color: white;
   border: none;
   padding: 0.5rem 1rem;
@@ -290,7 +300,7 @@ main {
 }
 
 .toggle-btn:hover {
-  background: darkred;
+  background: rgb(211, 12, 128);
 }
 
 /* Diseño responsivo para móviles */

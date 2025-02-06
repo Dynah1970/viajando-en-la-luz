@@ -1,0 +1,33 @@
+/* AQUI HAY CODEIOG QUE FUNCIONA PERO POR EL MOMENTO NOSE UDA */ 
+
+
+/* Bienvenida  este estaba en el inico  index pero por el moentno no es util*/ 
+.bienvenida {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5rem; /* Tamaño más grande */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background: url('background.jpg') no-repeat center center/cover;
+    color: black;
+    text-align: justify;
+    text-align: center;
+  }
+  .imagen-bienvenida {
+    width: 40%; /* Establece el ancho al 60% del contenedor */
+    height: auto; /* Mantén las proporciones de la imagen */
+    display: block; /* Asegura que se comporte como un bloque para centrado */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+  }
+
+
+  .esquema{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background: url('background.jpg') no-repeat center center/cover;
+    color: black;
+    text-align: center;
+  }
