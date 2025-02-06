@@ -239,7 +239,7 @@ main {
   .video-texto {
     font-size: rem; /* Ajusta el tamaño del texto en pantallas pequeñas */
     width: 90%; /* El texto ocupa más espacio en pantallas pequeñas */
-    top: 60%; /* Mueve un poco más abajo el texto para evitar que se sobreponga a otras áreas */
+    top: 90%; /* Mueve un poco más abajo el texto para evitar que se sobreponga a otras áreas */
   }
 }
 /* Responsivo para pantallas muy pequeñas (móviles) */
