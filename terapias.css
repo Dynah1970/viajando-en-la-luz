@@ -231,7 +231,40 @@ main {
   margin-bottom: 1.5rem; /* Espacio abajo del texto */
   line-height: 1.6;     /* Espaciado entre líneas */
 }
+.destacado {
+  background-color: #ffffff;
+  padding: 15px;
+  border-left: 5px solid #999;
+  margin: 20px 0;
+  border-radius: 5px;
+  font-style: italic;
+}
 
+.shadow-box {
+  background-color: #ffffff;
+  padding: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  margin: 20px 0;
+  border-radius: 5px;
+}
+blockquote {
+  background-color: #ffffff;
+  padding: 15px;
+  font-size: 1.9rem;
+  border-left: 5px solid #999999;
+  margin: 20px 0;
+  border-radius: 5px;
+  font-style: italic;
+}
+.note {
+  background-color: #eaeff4;
+  text-align: center;
+  font-style: italic;
+  padding: 20px;
+  font-size: 1.6rem;
+  
+  margin: 30px 0;
+}
 .container {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* Mantiene dos tarjetas por fila */
