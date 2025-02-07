@@ -370,6 +370,11 @@ a:hover {
   color: hsl(319, 100%, 57%);
   margin-bottom: 20px;
 }
+.bienvenida h2,
+ .familia-contenedor h2 {
+  font-size: 2.4rem;
+  text-align: center;
+}
 
 /* Ajustes para los botones */
 .btn-cta {
@@ -479,13 +484,51 @@ a:hover {
   text-align: center;
 }
 
+@media (max-width: 1024px) { /* Para tabletas */
+  #inicio h2 {
+    font-size: 1.6rem; /* Reduce el tamaño en tabletas */
+  }
+}
 
+@media (max-width: 768px) { /* Para móviles */
+  #inicio h2 {
+    font-size: 1.2rem; /* Reduce más el tamaño en móviles */
+  }
+}
 /* Efecto hover para los botones */
 .familia-contenedor .btn-cta:hover,
 .esquema-contenedor .btn-cta:hover {
   background-color: hsl(324, 100%, 50%);
 }
 
+/* Responsivo para pantallas pequeñas (móviles y tabletas) */
+@media (max-width: 768px) {
+  .video-texto {
+    font-size: 1.2rem; /* Ajusta el tamaño del texto en pantallas pequeñas */
+    width: 90%; /* El texto ocupa más espacio en pantallas pequeñas */
+    top: 50%; /* Mueve un poco más abajo el texto para evitar que se sobreponga a otras áreas */
+  }
+}
+
+/* Responsivo para pantallas muy pequeñas (móviles) */
+@media (max-width: 480px) {
+  .video-texto {
+    font-size: 0.8rem; /* Texto más pequeño en pantallas muy pequeñas */
+    width: 95%; /* Aumenta el ancho para que ocupe casi toda la pantalla */
+    padding: 0 10px; /* Menos padding en pantallas pequeñas */
+    top: 50%; /* Ajuste de la posición vertical del texto */
+  }
+}
+
+@media (max-width: 1024px) { /* Aplica en tabletas y móviles */
+  .texto-container {
+    text-align: justify;
+    word-spacing: -2px; /* Corrige los espacios irregulares */
+    letter-spacing: 0.2px; /* Suaviza la separación de letras */
+    line-height: 1.8; /* Aumenta el espacio entre líneas */
+    hyphens: auto; /* Permite cortar palabras y evita saltos raros */
+  }
+}
 
 /* Tarjetas con movimiento */
 .razones-invertir {
@@ -499,6 +542,7 @@ a:hover {
   justify-content: center;
   align-items: stretch;
 }
+
 
 /* Estilo para cada tarjeta */
 .tarjeta {

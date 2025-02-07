@@ -431,6 +431,15 @@ a:hover {
     margin: 0 10px; /* Ajusta el margen en dispositivos más pequeños */
   }
 }
+@media (max-width: 1024px) { /* Aplica en tabletas y móviles */
+  .centrado{
+    text-align: justify;
+    word-spacing: -2px; /* Corrige los espacios irregulares */
+    letter-spacing: 0.2px; /* Suaviza la separación de letras */
+    line-height: 1.8; /* Aumenta el espacio entre líneas */
+    hyphens: auto; /* Permite cortar palabras y evita saltos raros */
+  }
+}
 
 
 .esquema{
