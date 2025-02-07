@@ -325,6 +325,33 @@ a:hover {
   padding: 10px;
 }
 
+.note {
+  background-color: #eaeff4;
+  text-align: justify;
+  padding: 20px;
+  font-size: 1.1rem;
+  margin: 30px 0;
+}
+.note-footer {
+  text-align: center; /* Centra el contenido dentro del pie de cada nota */
+  margin-top: 20px; /* Espaciado entre el texto y los íconos */
+}
+
+.icon-container {
+  text-align: center; /* Centra el ícono dentro de su contenedor */
+}
+
+.icon {
+  font-size: 30px; /* Tamaño del ícono */
+  color: #4CAF50; /* Color del ícono */
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.note {
+  margin-bottom: 30px; /* Espaciado entre las notas */
+}
+
 /* Estilo para el texto dentro de la imagen en esquema (igual que los videos) */
 .esquema-contenedor p {  /* Si el texto está en un <p> dentro de .esquema-img */
   font-family: 'Arial', sans-serif;  /* Mismo tipo de letra */
